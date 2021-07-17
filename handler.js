@@ -16,4 +16,10 @@ module.exports.getAllClients = (event, context, callback) => {
         body: JSON.stringify(res)
       })
     })
+    .catch(e => {
+      callback(null, {
+        statusCode: e.statusCode || 500,
+        body: "Not table: " + e
+      })
+    })
 };
