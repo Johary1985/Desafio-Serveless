@@ -1,0 +1,76 @@
+service: desafiosls
+app: server-app
+
+
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  lambdaHashingVersion: 20201221
+  region: us-east-1
+  # iamRoleStatements:
+  #   - Effect: 'Allow'
+  #     Action:
+  #       - ec2:CreateNetworkInterface
+  #       - ec2:DescribeNetworkInterfaces
+  #       - ec2:DeleteNetworkInterface
+  #     Resource:
+  #       - "*"
+  
+functions:
+
+  # getClient:
+  #   handler: handler.getClient
+  #   events:
+  #     - http:
+  #         path: clients/{id}
+  #         method: get
+  #         cors: false
+
+  GetAllClients:
+    handler: handler.getAllClients
+    events:
+      - http:
+          path: clients
+          method: get
+          cors: true
+    vpc:
+      securityGroupIds:
+        - sg-29094f33
+      subnetIds:
+        - subnet-10444f1e
+        - subnet-f38fd3d2
+        - subnet-be7c198f
+        - subnet-261d4c40
+        - subnet-df9a7b93
+        - subnet-421b491d
+
+
+  # createClient:
+  #   handler: handler.createClient
+  #   events:
+  #     - http:
+  #         path: /clients
+  #         method: post
+  #         cors: false
+
+  # updateClient:
+  #   handler: handler.updateClient
+  #   events:
+  #   - http:
+  #      path: /clients/{id}
+  #      method: put
+  #      cors: false
+
+  # deleteClient:
+  #   handler: handler.deleteClient
+  #   events:
+  #    - http:
+  #       path: /clients/{id}
+  #       method: delete
+  #       cors: false  
+
+
+plugins:
+  - serverless-offline
