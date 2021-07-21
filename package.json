@@ -13,11 +13,16 @@
   "author": "Erick",
   "license": "ISC",
   "devDependencies": {
-    "serverless": "^2.51.2"
+    "sequelize-cli": "^6.2.0",
+    "serverless": "^2.52.0",
+    "serverless-offline": "^7.0.0"
   },
   "dependencies": {
+    "express": "^4.17.1",
     "pg": "^7.18.2",
+    "pg-hstore": "^2.3.4",
     "postgresql-easy": "^1.2.5",
-    "serverless-offline": "^7.0.0"
+    "sequelize": "^6.6.5",
+    "serverless-http": "^2.7.0"
   }
 }

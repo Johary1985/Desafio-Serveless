@@ -8,7 +8,7 @@
       "name": "aws",
       "runtime": "nodejs14.x",
       "lambdaHashingVersion": "20201221",
-      "region": "us-east-1",
+      "region": "us-east-2",
       "stage": "dev",
       "versionFunctions": true,
       "compiledCloudFormationTemplate": {
@@ -188,7 +188,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/desafiosls/dev/1626532141588-2021-07-17T14:29:01.588Z/desafiosls.zip"
+                "S3Key": "serverless/desafiosls/dev/1626909973013-2021-07-21T23:26:13.013Z/desafiosls.zip"
               },
               "Handler": "handler.getAllClients",
               "Runtime": "nodejs14.x",
@@ -203,15 +203,12 @@
               },
               "VpcConfig": {
                 "SecurityGroupIds": [
-                  "sg-29094f33"
+                  "sg-061eb24e"
                 ],
                 "SubnetIds": [
-                  "subnet-10444f1e",
-                  "subnet-f38fd3d2",
-                  "subnet-be7c198f",
-                  "subnet-261d4c40",
-                  "subnet-df9a7b93",
-                  "subnet-421b491d"
+                  "subnet-b9b97dc4",
+                  "subnet-b2d35dd9",
+                  "subnet-6af2de26"
                 ]
               }
             },
@@ -219,14 +216,14 @@
               "GetAllClientsLogGroup"
             ]
           },
-          "GetAllClientsLambdaVersionG6g4ygnsifGSqVg847Ia0lnG0ERRPA6ot5JIPP8Jw": {
+          "GetAllClientsLambdaVersionT0ledVBd3BW1hCqBa467EWGYHDxWmGbSs8FgzB0t8": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetAllClientsLambdaFunction"
               },
-              "CodeSha256": "K/wbo6ppDp5iD5wfsCzKNfGoKlihXwcooOzBA6Ymt7Q="
+              "CodeSha256": "sbBgD775nD2jN2kaAgFBYFrRsjnTLELDN5ssL36T1ys="
             }
           },
           "ApiGatewayRestApi": {
@@ -347,7 +344,7 @@
               "GetAllClientsLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1626532099028": {
+          "ApiGatewayDeployment1626909932192": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -410,7 +407,7 @@
           "GetAllClientsLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetAllClientsLambdaVersionG6g4ygnsifGSqVg847Ia0lnG0ERRPA6ot5JIPP8Jw"
+              "Ref": "GetAllClientsLambdaVersionT0ledVBd3BW1hCqBa467EWGYHDxWmGbSs8FgzB0t8"
             },
             "Export": {
               "Name": "sls-desafiosls-dev-GetAllClientsLambdaFunctionQualifiedArn"
@@ -576,7 +573,7 @@
         "memory": 1024,
         "timeout": 6,
         "runtime": "nodejs14.x",
-        "versionLogicalId": "GetAllClientsLambdaVersionG6g4ygnsifGSqVg847Ia0lnG0ERRPA6ot5JIPP8Jw"
+        "versionLogicalId": "GetAllClientsLambdaVersionT0ledVBd3BW1hCqBa467EWGYHDxWmGbSs8FgzB0t8"
       }
     },
     "configValidationMode": "warn",
@@ -600,10 +597,10 @@
     "app": "server-app",
     "layers": {},
     "isDashboardMonitoringPreconfigured": false,
-    "artifact": "C:\\Users\\Carmen y Erick\\desafioServeless\\.serverless\\desafiosls.zip"
+    "artifact": "C:\\Users\\Carmen y Erick\\Downloads\\Desafio-Serveless\\Desafio-Serveless\\.serverless\\desafiosls.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/desafiosls/dev/1626532141588-2021-07-17T14:29:01.588Z",
+    "artifactDirectoryName": "serverless/desafiosls/dev/1626909973013-2021-07-21T23:26:13.013Z",
     "artifact": "desafiosls.zip"
   }
 }

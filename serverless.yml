@@ -8,7 +8,7 @@ provider:
   name: aws
   runtime: nodejs14.x
   lambdaHashingVersion: 20201221
-  region: us-east-1
+  region: us-east-2
   # iamRoleStatements:
   #   - Effect: 'Allow'
   #     Action:
@@ -37,14 +37,11 @@ functions:
           cors: true
     vpc:
       securityGroupIds:
-        - sg-29094f33
+        - sg-061eb24e #sg-29094f33
       subnetIds:
-        - subnet-10444f1e
-        - subnet-f38fd3d2
-        - subnet-be7c198f
-        - subnet-261d4c40
-        - subnet-df9a7b93
-        - subnet-421b491d
+        - subnet-b9b97dc4
+        - subnet-b2d35dd9
+        - subnet-6af2de26
 
 
   # createClient:
